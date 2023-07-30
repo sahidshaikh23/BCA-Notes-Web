@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQJLE9ERSB"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'G-NQJLE9ERSB');
+      </script>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,400&family=Lugrasimo&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="index.css">
+      <title>BCA Science Notes Web</title>
+   </head>
+   <body>
+      <nav class="navbar">
+         <div class="navbar__search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search By Subject" />
+         </div>
+      </nav>
+      <main>
+         <h1 class="h1" id="mainTitle">BCA Science Notes</h1>
+         <p class="p" id="mainDescription">A Website That Contains Notes Of BCA Science Course</p>
+         <section class="sec1" id="java">
+            <h2 class="java">Programming in Java</h2>
+            <table>
+               <tr>
+                  <th>Sr no</th>
+                  <th>Assignment</th>
+                  <th>Download</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>Practical Assignment no.1</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a" download>Download</a></td>
+
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Practical Assignment no.2</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+            </table>
+         </section>
+         <section class="sec2" id="op">
+            <h2 class="op">Principles of Operating Systems</h2>
+            <table>
+               <tr>
+                  <th>Sr no</th>
+                  <th>Assignment</th>
+                  <th>Download</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>Practical Assignment no.1</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Practical Assignment no.2</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+            </table>
+         </section>
+         <section class="sec3" id="dd">
+            <h2 class="DD">Data Mining & Data Science</h2>
+            <table>
+               <tr>
+                  <th>Sr no</th>
+                  <th>Assignment</th>
+                  <th>Download</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>Practical Assignment no.1</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Practical Assignment no.2</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+            </table>
+         </section>
+         <section class="sec3" id="ai">
+            <h2 class="DD">Artificial Intelligence</h2>
+            <table>
+               <tr>
+                  <th>Sr no</th>
+                  <th>Assignment</th>
+                  <th>Download</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>Practical Assignment no.1</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Practical Assignment no.2</td>
+                  <td><a href="https://tinyurl.com/37ksj8vv" class="a">Download</a></td>
+               </tr>
+            </table>
+         </section>
+      </main>
+      <footer class="footer">
+        <div class="contact-form">
+            <h3>If You Have Any Query <br>Contact Us</h3>
+            <!-- Remove the email address here -->
+            <p>Email: <br><a href="mailto:sahidshaikh23042003@gmail.com" style="text-decoration: none" id="a">Contact us via email</a></p> <br>
+            <p>Phone: <br><a href="tel:+917028040051" style="text-decoration: none" id="a">Contact us via phone</a></p>
+          </div>
+          <br><br>
+          <br>
+      </footer>
+   </body>
+   <script>
+      const searchInput = document.getElementById("searchInput");
+            const sections = document.querySelectorAll("section");
+            const mainTitle = document.getElementById("mainTitle");
+            const mainDescription = document.getElementById("mainDescription");
+            const footer = document.querySelector(".footer");
+
+            searchInput.addEventListener("input", () => {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                sections.forEach((section) => {
+                    const sectionTitle = section.querySelector("h2").textContent.toLowerCase();
+                    if (sectionTitle.includes(searchTerm)) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+
+                // Hide the main title, description, and footer when searching
+                if (searchTerm === "") {
+                    mainTitle.style.display = "block";
+                    mainDescription.style.display = "block";
+                    footer.style.display = "block";
+                } else {
+                    mainTitle.style.display = "none";
+                    mainDescription.style.display = "none";
+                    footer.style.display = "none";
+                }
+            });
+
+   </script>
+</html>

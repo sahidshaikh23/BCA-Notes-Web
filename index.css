@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    color: #1d2c35;
+}
+
+body{
+    background-color: #d8eee1;
+    padding-top: 70px;
+}
+
+main {
+    padding: 20px;
+}
+
+.h1 {
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.p {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sec1, .sec2, .sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.java, .op, .DD {
+    font-size: 40px;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Styles for the contact form in the footer */
+.footer {
+    position: relative; /* To make sure the form is positioned correctly */
+}
+
+.contact-form {
+    max-width: 500px; /* Adjust the max-width for better display on laptops */
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 20px 30px; /* Adjust the padding for better spacing */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.a {
+    text-decoration: none;
+    font-size: 18px;
+    color: dodgerblue;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+}
+
+.a:hover {
+    color: #0056b3;
+}
+#a:hover
+{
+    color: #0056b3;
+}
+/* Your existing CSS styles */
+
+/* Add the CSS for the search bar in the nav */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    z-index: 999;
+}
+
+.navbar__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d2c35;
+    text-decoration: none;
+}
+
+.navbar__search {
+    flex: 1; /* To make the search bar fill the available space */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    left: 10px;
+    color: #007bff;
+    top: 25%;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 35px 10px 30px; /* Adjust the padding to make space for the icon */
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Center the icon in the search bar container */
+.navbar__search::before {
+    content: '\f002'; /* Unicode of the search icon from Font Awesome */
+    font-family: 'Font Awesome 5 Free'; /* Use your Font Awesome font-family here */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+    font-size: 16px;
+}
+
+/* Media query for the responsive navigation bar and search bar */
+@media screen and (max-width: 768px) {
+    .navbar__menu {
+        display: block;
+    }
+
+    .navbar__list {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        padding: 10px;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+    }
+
+    .navbar__list.show {
+        display: flex;
+    }
+
+    .navbar__item {
+        margin: 5px 0;
+    }
+
+    #searchInput {
+        margin-bottom: 10px;
+        padding-right: 30px; /* Adjust the padding to make space for the icon */
+    }
+
+    /* Center the icon in the search bar container for smaller screens */
+    .navbar__search::before {
+             position: absolute;
+            left: 5px;
+            top: 50%; /* Center the icon vertically */
+            transform: translateY(-50%);
+    }
+}
+
+#searchContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+/* Add a background color when the search container is fixed */
+#searchContainer.fixed {
+    background-color: #fff;
+}
+@media screen and (max-width: 600px) {
+    .contact-form {
+        padding: 10px;
+        margin: 15px;
+    }
+    /* Center the icon in the search bar container for smaller screens */
+    .navbar__search::before {
+        left: 5px;
+    }
+}
